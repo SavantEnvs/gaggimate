@@ -1,0 +1,9 @@
+project: savantenvs/gaggimate
+target: fuzz_ota_download
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_ota_download/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz_ota_download
+    libfuzzer: true
+    timeout: 5

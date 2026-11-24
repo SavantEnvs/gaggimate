@@ -1,0 +1,9 @@
+project: savantenvs/gaggimate
+target: fuzz_wakeup_schedules
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_wakeup_schedules/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz_wakeup_schedules
+    libfuzzer: true
+    timeout: 5

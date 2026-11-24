@@ -1,0 +1,9 @@
+project: savantenvs/gaggimate
+target: fuzz_uart_transport
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_uart_transport/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz_uart_transport
+    libfuzzer: true
+    timeout: 5

@@ -1,0 +1,9 @@
+project: savantenvs/gaggimate
+target: fuzz_semver
+testsuite:
+  - https://$MAYHEM_DOMAIN/$MAYHEM_PROJECT/$MAYHEM_TARGET/testsuite.tar
+  - file://mayhem/fuzz_semver/testsuite
+cmds:
+  - cmd: /mayhem/out/fuzz_semver
+    libfuzzer: true
+    timeout: 5
